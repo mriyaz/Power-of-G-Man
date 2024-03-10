@@ -14,23 +14,19 @@
 This Project is a backend challenge from https://www.geektrust.com/coding/detailed/power-of-g-man
 
 ### Context
--------
 
 G-Man is a video game in which G-Man has to move from one point to another on a grid (6 X 6 grid). There could be multiple paths between a source coordinate and destination coordinate and G-Man needs to reach the destination by spending least amount of power.
 
 ### Position
---------
 
 1.  G-Man's position is located by the x, y coordinate of the grid.
 2.  One of the four compass points N, E, S and W indicates the direction G-Man is facing. Eg: 2, 1 N means the G-Man is at 2 on the x coordinate, 1 on the y coordinate, and facing North.
 
 ### 6 X 6 Grid
-----------
 
 ![](https://geektrust.sgp1.cdn.digitaloceanspaces.com/assets/v2/problems/power-of-g-man/gman-grid.png)
 
 ### Moves
------
 
 At the start of the game, G-Man is given a power of 200 units. His power is reduced for every move and turn he takes.
 
@@ -41,12 +37,11 @@ At the start of the game, G-Man is given a power of 200 units. His power is redu
     -   eg: If G-Man moves from 2, 1 S to 4, 5; he has to turn twice and move 6 grid points. So he loses 70 power points.
 
 ### Goal
------
 
 Given the source and destination coordinates, G-Man needs to reach the destination by spending least amount of power. And you need to print the remaining power he has after taking the shortest path with minimum number of turns.
 
 ### Tips
------
+
 1.  - All input commands are to be read from a file, and output is to be printed to the console.
 2.  - Build a command line application with the location to the text file as parameter.
 3.  - No server, DB, UI or in-memory data store required.
