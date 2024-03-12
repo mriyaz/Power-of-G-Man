@@ -3,12 +3,11 @@
 **Table of Contents**
 
 * [Project Overview](#project-overview)
-* [Dependencies](#dependencies)
-* [Development Setup](#development-setup)
-* [Project Structure](#project-structure)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [License](#license)
+* [Pre-requisites](#pre-requisites)
+* [How to run the code](#how-to-run-the-code)
+* [How to execute the unit tests](#how-to-execute-the-unit-tests)
+
+
 
 ## Project Overview
 This Project is a backend challenge from https://www.geektrust.com/coding/detailed/power-of-g-man
@@ -47,79 +46,23 @@ Given the source and destination coordinates, G-Man needs to reach the destinati
 3.  - No server, DB, UI or in-memory data store required.
 4.  - Avoid using third party libraries/frameworks for implementing core logic.
 
-## Dependencies
 
-This project relies on the following Python libraries:
+## Pre-requisites
+* Python 3.8/3.9
+* Pip
 
-```
-# List your project's dependencies here, one per line
-dependency1
-dependency2
-```
+## How to run the code
 
-You can install them using pip:
+Use `run.sh` if you are Linux/Unix/macOS Operating systems and `run.bat` if you are on Windows.  Both the files run the commands silently and prints only output from the input file `sample_input/input1.txt`. You are supposed to add the input commands in the file from the appropriate problem statement. 
 
-```bash
-pip install -r requirements.txt
-```
+Internally both the scripts run the following commands 
 
-## Development Setup
+ * `pip install -r requirements.txt` - This will install the dependencies mentioned in the requirement.file
+ * `python -m geektrust sample_input/input1.txt` - This will run the solution passing in the sample input file as the command line argument
 
-1. **Clone the repository:**
+ ## How to execute the unit tests
 
-   ```bash
-   git clone https://github.com/<username>/<project-name>.git
-   ```
+ `python -m unittest discover` will execute the unit test cases.
 
-2. **Navigate to the project directory:**
-
-   ```bash
-   cd <project-name>
-   ```
-
-3. **Install dependencies:**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-## Project Structure
-
-```
-<project-name>
-├── README.md (This file)
-├── requirements.txt (List of dependencies)
-├── src/
-│   ├── __init__.py (Optional: Empty file to indicate a Python package)
-│   ├── your_module1.py
-│   └── your_module2.py (Add additional modules as needed)
-├── tests/
-│   ├── test_your_module1.py
-│   └── test_your_module2.py (Unit tests for your modules)
-└── main.py (Entry point for your backend application)
-```
-
-- **src:** Contains the source code for your backend application, organized into modules (optional `__init__.py` for Python packages).
-- **tests:** Houses unit tests for your modules to ensure correct functionality (using a testing framework like `unittest` or `pytest`).
-- **main.py:** Serves as the entry point for your backend application, typically importing modules from `src` and defining logic for execution.
-- **requirements.txt:** Lists all project dependencies for easy installation using `pip install -r requirements.txt`.
-
-## Usage
-
-<-- Provide clear instructions on how to run or use your backend application, including any command-line arguments or configuration options. -->
-
-
-## Contributing
-
-We welcome contributions to this project! Please follow these guidelines:
-
-1. Fork the repository on GitHub.
-2. Create a new branch for your feature or bug fix.
-3. Implement your changes and write unit tests to verify them.
-4. Submit a pull request with a clear description of your changes.
-
-We'll review your pull request and merge it if it meets our standards.
-
-## License
-
-This project is licensed under the MIT license.
+ The unit test coverage is found by the command :
+`coverage run -m unittest discover`
